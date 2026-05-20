@@ -1,0 +1,39 @@
+<div style="font-family: Arial, sans-serif; padding: 20px;">
+  <h1>🏛️ Anagrafe Comunale (Monolite)</h1>
+
+  <!-- <div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ccc; max-width: 400px;">
+    <h3>Aggiungi Cittadino</h3>
+    <input type="text" [(ngModel)]="nuovoCittadino.nome" placeholder="Nome" style="display:block; margin-bottom: 10px; width: 100%; padding: 5px;">
+    <input type="text" [(ngModel)]="nuovoCittadino.cognome" placeholder="Cognome" style="display:block; margin-bottom: 10px; width: 100%; padding: 5px;">
+    <input type="text" [(ngModel)]="nuovoCittadino.codiceFiscale" placeholder="Codice Fiscale" style="display:block; margin-bottom: 10px; width: 100%; padding: 5px;">
+    <button (click)="aggiungiCittadino()" style="padding: 8px 15px; cursor: pointer;">Salva Cittadino</button>
+  </div> -->
+
+<div style="margin-bottom: 20px; padding: 15px; border: 1px solid #ccc; max-width: 400px;">
+  <h3>Aggiungi Cittadino</h3>
+  <input type="text" name="nome" [(ngModel)]="nuovoCittadino.nome" placeholder="Nome" style="display:block; margin-bottom: 10px; width: 100%;">
+  <input type="text" name="cognome" [(ngModel)]="nuovoCittadino.cognome" placeholder="Cognome" style="display:block; margin-bottom: 10px; width: 100%;">
+  <input type="text" name="codiceFiscale" [(ngModel)]="nuovoCittadino.codiceFiscale" placeholder="Codice Fiscale" style="display:block; margin-bottom: 10px; width: 100%;">
+  
+  <button (click)="aggiungiCittadino()">Salva</button>
+</div>
+
+
+
+
+
+  <table border="1" cellpadding="10" style="border-collapse: collapse; width: 100%; max-width: 600px;">
+    <tr style="background-color: #f2f2f2;">
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Cognome</th>
+      <th>Codice Fiscale</th>
+    </tr>
+    <tr *ngFor="let c of cittadini">
+      <td>{{ c.id }}</td>
+      <td>{{ c.nome }}</td>
+      <td>{{ c.cognome }}</td>
+      <td>{{ c.codiceFiscale }}</td>
+    </tr>
+  </table>
+</div>
